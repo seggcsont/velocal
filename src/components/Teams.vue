@@ -1,12 +1,16 @@
 <template>
-    <div class="w-1/3 p-auto">
-        <h1>Hello World!</h1>
+    <div>
+        <Panel>Hello World!</Panel>
     </div>
 </template>
 
 <script>
+    import Panel from "./Panel.vue";
     export default {
-        name: 'Teams'
+        name: 'Teams',
+        components: {
+            Panel
+        }
     }
 </script>
 
