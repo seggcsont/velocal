@@ -6,25 +6,30 @@
           <thead>
             <tr>
               <th class="px-4 py-2">Name</th>
+              <th>
+                <div class="w-5"></div>
+              </th>
               <th class="px-4 py-2">Size</th>
               <th class="px-4 py-2">Members</th>
             </tr>
           </thead>
           <tbody>
             <tr v-if="teams.length == 0">
-                <td colspan="3" class="text-center font-extrabold text-gray-500">
-                    No teams available
-                </td>
+              <td colspan="3" class="text-center font-extrabold text-gray-500">No teams available</td>
             </tr>
-            <tr v-for="(team, n) in teams" :key="team.name" :class="[n%2 == 1 ? 'bg-blue-200' : 'bg-blue-300']">
-              <td class="border px-4 py-2">{{team.name}}</td>
-              <td class="border px-4 py-2">{{team.members.length}}</td>
-              <td class="border px-4 py-2">{{team.members.map(member => member.name).join(', ')}}</td>
-              <td class="border px-4 py-2" v-if="slotProps.editMode">
-                <span @click="teams.splice(n,1)">
+            <tr
+              v-for="(team, n) in teams"
+              :key="team.name"
+              :class="[n%2 == 1 ? 'bg-blue-200' : 'bg-blue-300']"
+            >
+              <td class="px-4 py-2 text-justify">{{team.name}}</td>
+              <td class="border-r text-right pr-2">
+                <span v-if="slotProps.editMode" @click="teams.splice(n,1)">
                   <i class="fa fa-trash"></i>
                 </span>
               </td>
+              <td class="border-r px-4 py-2">{{team.members.length}}</td>
+              <td class="px-4 py-2">{{team.members.map(member => member.name).join(', ')}}</td>
             </tr>
           </tbody>
         </table>
