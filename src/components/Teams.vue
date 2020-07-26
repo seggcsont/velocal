@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Panel>Hello World!</Panel>
+        <Panel editable>Hello World!</Panel>
     </div>
 </template>
 
