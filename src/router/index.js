@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Teams from '../views/Teams.vue'
+import Team from '../views/Team.vue'
 
 Vue.use(VueRouter)
 
@@ -10,6 +11,11 @@ const routes = [
     name: 'Teams',
     component: Teams,
     alias: '/teams'
+  },
+  {
+    path: '/team/:name',
+    name: 'Team',
+    component: Team
   }
 ]
 

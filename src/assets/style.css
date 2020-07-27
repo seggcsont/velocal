@@ -1,0 +1,30 @@
+.flag-icon {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    width: 1.33333333em;
+    line-height: 1em;
+}
+
+.flag-icon:before {
+    content: "\00a0";
+}
+
+.flag-icon-hu {
+    background-image: url('./hu.svg');
+}
+
+.flag-icon-in {
+    background-image: url('./in.svg');
+}
+
+.flag-icon-us {
+    background-image: url('./us.svg');
+}
+
+input[type='radio']:checked+.flag-icon {
+    box-shadow: 0 0px 5px 0px blue;
+    transform: scale(1.25, 1.25);
+}
