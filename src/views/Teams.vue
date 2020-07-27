@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import Panel from "./Panel.vue";
+import Panel from "../components/Panel";
 export default {
   name: "Teams",
   components: {
