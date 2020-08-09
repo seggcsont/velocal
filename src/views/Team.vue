@@ -3,7 +3,7 @@
     <Panel editable>
       <template v-slot:default="slotProps">
         <h1 class="text-center font-extrabold">{{name}}</h1>
-        <table class="table-auto w-full">
+        <table class="table-auto m-auto w-4/5">
           <thead>
             <tr>
               <th class="px-4 py-2">Name</th>
@@ -44,7 +44,7 @@
                 <label for="name">Name</label>
               </td>
               <td>
-                <input type="text" id="name" v-model="newMemberName" />
+                <input class="rounded pl-1 border border-blue-300 focus:border-blue-700 outline-none" type="text" id="name" v-model="newMemberName" />
               </td>
             </tr>
             <tr>
